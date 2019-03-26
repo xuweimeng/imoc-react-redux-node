@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { add_Gun, remove_Gun, two_Gun} from './index.redux'
 
+@connect(
+  state=>({num: state.counter}),
+  {add_Gun, remove_Gun, two_Gun}
+)
 class App extends Component {
   render() {
     return (
@@ -16,12 +20,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {num: state}
-}
-
-const actionCreators = {add_Gun, remove_Gun, two_Gun}
-
-
-App = connect(mapStateToProps, actionCreators)(App)
 export default App;

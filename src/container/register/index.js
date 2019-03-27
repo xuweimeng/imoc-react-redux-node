@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 import Logo from '../../component/logo'
 import { WingBlank, WhiteSpace, List, InputItem, Button, Radio, } from 'antd-mobile';
 import { connect } from 'react-redux';
@@ -40,6 +41,7 @@ class Register extends React.Component {
         ]
         return (
             <div>
+                {this.props.redirectTo?< Redirect to={this.props.redirectTo} />:null}
                 <Logo />
                 <WingBlank>
                     {this.props.msg?<p className="error-msg">{this.props.msg}</p>: null}

@@ -17,3 +17,23 @@ code {
   color: #f50;
   padding-left: 10px;
 }
+
+.am-tab-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.am-card-header-content img {
+  width: 30px;
+}
+
+.fixed-header, .am-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.page-content {
+  padding: 45px 5px;
+}

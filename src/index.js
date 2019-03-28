@@ -9,6 +9,7 @@ import './config.js'
 import Login from './container/login'
 import Register from './container/register'
 import AuthRoute from './component/authroute'
+import Dashboard from './component/dashboard'
 import BossInfo from './container/bossinfo'
 import GeniusInfo from './container/geniusinfo'
 import reducers from './reducer';
@@ -21,11 +22,6 @@ const store =  createStore(reducers,
     )
 )
 
-// console.log(store.getState())
-function Boss() {
-    return<h2>boss</h2>
-}
-
 ReactDOM.render(
     <Provider  store={store}>
         <BrowserRouter>
@@ -36,6 +32,7 @@ ReactDOM.render(
                     <Route path ="/geniusinfo" component={GeniusInfo}></Route>
                     <Route exact path="/login" component={Login}></Route>
                     <Route path="/register" component={Register}></Route>
+                    <Route component={Dashboard}></Route>
                 </Switch>
                 
             </div>

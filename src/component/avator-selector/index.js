@@ -21,7 +21,7 @@ class AvatorSelector extends React.Component {
     const gridHeader = this.state.elm
                       ?<div>
                         <span>已选择头像</span>
-                        <img style={{width:20}} src={this.state.elm.icon} />
+                        <img style={{width:20}} src={this.state.elm.icon} alt="" />
                       </div>
                       :<div>请选择头像</div>
     return (

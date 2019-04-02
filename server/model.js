@@ -6,17 +6,22 @@ mongoose.connect(DB_URL)
 
 const models = {
   user: {
-    'user': {type: String, require: true},
-    'pwd': {type: String, require: true},
-    'type': {type: String, require: true},
-    'avator': {type: String}, // 头像
-    'desc': {type: String}, // 个人简介、职位简介
-    'title': {type: String}, // 职位名
-    'company': {type: String},
-    'money': {type: String}
+    'user': {'type': String, require: true},
+    'pwd': {'type': String, require: true},
+    'type': {'type': String, require: true},
+    'avator': {'type': String}, // 头像
+    'desc': {'type': String}, // 个人简介、职位简介
+    'title': {'type': String}, // 职位名
+    'company': {'type': String},
+    'money': {'type': String}
   },
   chat: {
-    
+    'chatid': {'type': String, require: true},
+    'from': {'type': String, require: true},
+    'to': {'type': String, require: true},
+    'read': {'type': Boolean, default: false},
+    'content': {'type': String, require: true, default: ''},
+    'create_time': {'type': Number, default: new Date().getTime()}
   }
 }
 
